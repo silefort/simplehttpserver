@@ -44,7 +44,8 @@ class S(BaseHTTPRequestHandler):
         # Doesn't do anything with posted data
         self._set_headers()
         self.wfile.write(b"<html><body><h1>POST!</h1></body></html>")
-        self.log_rawRequestHeader()
+        # Headers are not working well, let's comment it for now
+        # self.log_rawRequestHeader()
         self.log_rawRequestBody()
  
     def log_rawRequestHeader(self):
