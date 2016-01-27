@@ -49,7 +49,7 @@ class S(BaseHTTPRequestHandler):
     def log_rawRequestHeader(self):
         # https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler
         print(self.command, self.path, self.request_version)
-        print(self.headers.as_string())
+        print(self.headers)
  
     def log_rawRequestBody(self):
         # https://docs.python.org/3/library/email.message.html#email.message.Message
